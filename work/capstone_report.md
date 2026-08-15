@@ -32,7 +32,7 @@ A hand-written heuristic targeting "stale and visible" pages (`impressions_90d *
 ## 5. Evaluation
 
 *   **Validation Design:** A `GroupShuffleSplit` on `client_hash_id` guarantees that pages from the same client never appear in both the training and test sets, strictly preventing the model from memorizing client-specific seasonal quirks. 
-*   **Metrics:** The model was evaluated against the transparent baseline on the same unseen test clients.[cite: 22] We used Precision@50 as the primary success metric because human reviewers can only audit a limited number of pages per cycle.
+*   **Metrics:** The model was evaluated against the transparent baseline on the same unseen test clients. We used Precision@50 as the primary success metric because human reviewers can only audit a limited number of pages per cycle.
 *   **Results:** The Random Forest Classifier achieved a Precision@50 of 0.600 on the holdout set, compared to the baseline's 0.820 and a base rate of 0.812.
 
 ## 6. Interpretation
